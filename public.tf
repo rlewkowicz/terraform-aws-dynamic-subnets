@@ -39,7 +39,8 @@ resource "aws_subnet" "public" {
           var.delimiter
         )
       )
-    }
+    },
+    {"kubernetes.io/role/elb" = "1"}
   )
 
   lifecycle {

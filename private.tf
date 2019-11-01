@@ -37,7 +37,8 @@ resource "aws_subnet" "private" {
           var.delimiter
         )
       )
-    }
+    },
+    {"kubernetes.io/role/internal-elb" = "1"}
   )
 
   lifecycle {
